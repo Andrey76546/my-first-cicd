@@ -1,24 +1,33 @@
-# Лабораторная работа 1. Первый Pipeline
+# Лабораторная работа 1. Первый CI pipeline
 
-## Цель
+## Цель работы
 
-Проверить работу GitHub Actions с помощью минимального workflow, который запускается при каждом `push`.
+Настроить базовый pipeline GitHub Actions и подтвердить его успешное выполнение при изменениях в репозитории.
 
-## Выполненные этапы
+## Что сделано
 
-1. Создан workflow [ci-hello.yml](.github/workflows/ci-hello.yml).
-2. В качестве среды выполнения используется `ubuntu-latest`.
-3. Репозиторий загружается действием `actions/checkout@v4`.
-4. В журнал выводится сообщение: `Привет, мир! Я только что запустил CI!`.
+- Создан workflow [`ci-hello.yml`](.github/workflows/ci-hello.yml).
+- Настроены запуски для `push` и `pull_request` в ветку `main`, а также ручной запуск `workflow_dispatch`.
+- Задача `hello` выполняется на фиксированном образе `ubuntu-24.04`.
+- Репозиторий загружается актуальным действием `actions/checkout@v7`.
+- В журнал выводится контрольное сообщение: `Привет, мир! Я только что запустил CI!`.
 
-## Проверка
+## Как запускать / проверять
 
-Workflow запускается автоматически после отправки изменений в GitHub. Результаты доступны на странице [First CI Pipeline](https://github.com/Andrey76546/my-first-cicd/actions/workflows/ci-hello.yml).
+1. Отправить коммит в ветку `main` или открыть pull request в `main`.
+2. Либо открыть вкладку **Actions**, выбрать **First CI Pipeline** и нажать **Run workflow**.
+3. Убедиться, что workflow имеет статус **Success**, а задача `hello` отмечена зелёной галочкой.
 
-До публикации файл workflow проверен валидатором `actionlint`: ошибок не обнаружено.
+## Результат выполнения
 
-## Скриншот выполнения
+[First CI Pipeline #3](https://github.com/Andrey76546/my-first-cicd/actions/runs/39559397509) успешно завершён: задача `hello` выполнена на `ubuntu-24.04`.
 
-[Запуск First CI Pipeline #1](https://github.com/Andrey76546/my-first-cicd/actions/runs/39518803734) завершён успешно. Задача `hello` выполнилась на `ubuntu-latest`.
+## Скриншот
 
-![Успешный запуск First CI Pipeline](screenshots/actions-success.png)
+![Успешный запуск First CI Pipeline](screenshots/first-ci.png)
+
+## Ссылка на workflow / Actions
+
+- [Файл workflow](.github/workflows/ci-hello.yml)
+- [Все запуски First CI Pipeline](https://github.com/Andrey76546/my-first-cicd/actions/workflows/ci-hello.yml)
+- [Подтверждённый успешный запуск](https://github.com/Andrey76546/my-first-cicd/actions/runs/39559397509)
