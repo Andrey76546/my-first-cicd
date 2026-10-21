@@ -28,6 +28,10 @@
 
 Чтобы получить такой же результат, запустите workflow **First CI Pipeline** и откройте лог задачи `hello`, шаг **Run greeting**.
 
+### Скриншот вывода программы
+
+![Фактический вывод шага Run greeting в GitHub Actions](screenshots/first-ci-output.png)
+
 ## Результат выполнения
 
 [First CI Pipeline #3](https://github.com/Andrey76546/my-first-cicd/actions/runs/39559397509) успешно завершён: задача `hello` выполнена на `ubuntu-24.04`.
