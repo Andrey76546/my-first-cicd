@@ -19,4 +19,6 @@ Workflow запускается автоматически после отпра
 
 ## Скриншот выполнения
 
-Подтверждение успешного запуска будет добавлено после первой онлайн-проверки.
+[Запуск First CI Pipeline #1](https://github.com/Andrey76546/my-first-cicd/actions/runs/39518803734) завершён успешно. Задача `hello` выполнилась на `ubuntu-latest`.
+
+![Успешный запуск First CI Pipeline](screenshots/actions-success.png)
