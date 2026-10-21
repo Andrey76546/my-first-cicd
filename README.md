@@ -18,6 +18,16 @@
 2. Либо открыть вкладку **Actions**, выбрать **First CI Pipeline** и нажать **Run workflow**.
 3. Убедиться, что workflow имеет статус **Success**, а задача `hello` отмечена зелёной галочкой.
 
+## Результат выполнения программы
+
+Фактический консольный вывод шага **Run greeting** в успешном [First CI Pipeline #4](https://github.com/Andrey76546/my-first-cicd/actions/runs/39560014699):
+
+```text
+Привет, мир! Я только что запустил CI!
+```
+
+Чтобы получить такой же результат, запустите workflow **First CI Pipeline** и откройте лог задачи `hello`, шаг **Run greeting**.
+
 ## Результат выполнения
 
 [First CI Pipeline #3](https://github.com/Andrey76546/my-first-cicd/actions/runs/39559397509) успешно завершён: задача `hello` выполнена на `ubuntu-24.04`.
