@@ -21,6 +21,7 @@ jobs:
         run: |
           message="Привет, мир! Я только что запустил CI!"
           echo "$message"
+          echo "::notice title=Run greeting::$message"
           echo "## Run greeting" >> "$GITHUB_STEP_SUMMARY"
           echo '```text' >> "$GITHUB_STEP_SUMMARY"
           echo "$message" >> "$GITHUB_STEP_SUMMARY"
