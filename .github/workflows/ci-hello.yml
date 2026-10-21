@@ -18,4 +18,10 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Run greeting
-        run: echo "Привет, мир! Я только что запустил CI!"
+        run: |
+          message="Привет, мир! Я только что запустил CI!"
+          echo "$message"
+          echo "## Run greeting" >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          echo "$message" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
